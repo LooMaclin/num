@@ -18,6 +18,9 @@
 extern crate rustc_serialize;
 #[cfg(feature = "serde")]
 extern crate serde;
+#[cfg(feature = "serde")]
+#[macro_use]
+extern crate serde_derive;
 #[cfg(feature = "num-bigint")]
 extern crate num_bigint as bigint;
 
@@ -40,7 +43,7 @@ use traits::{FromPrimitive, Float, PrimInt, Num, Signed, Zero, One, Bounded, Num
 /// Represents the ratio between 2 numbers.
 #[derive(Copy, Clone, Debug)]
 #[cfg_attr(feature = "rustc-serialize", derive(RustcEncodable, RustcDecodable))]
-#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+
 #[allow(missing_docs)]
 pub struct Ratio<T> {
     numer: T,

@@ -33,6 +33,10 @@ version = "0.3.19"
 optional = true
 version = ">= 0.7.0, < 0.9.0"
 
+[dependencies.serde_derive]
+optional = true
+version = "1"
+
 [features]
 default = ["bigint", "rustc-serialize"]
 bigint = ["num-bigint"]

@@ -22,6 +22,10 @@ extern crate rustc_serialize;
 #[cfg(feature = "serde")]
 extern crate serde;
 
+#[cfg(feature = "serde")]
+#[macro_use]
+extern crate serde_derive;
+
 use std::error::Error;
 use std::fmt;
 #[cfg(test)]
