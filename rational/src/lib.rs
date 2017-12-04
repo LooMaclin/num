@@ -40,6 +40,7 @@ use traits::{FromPrimitive, Float, PrimInt, Num, Signed, Zero, One, Bounded, Num
 /// Represents the ratio between 2 numbers.
 #[derive(Copy, Clone, Debug)]
 #[cfg_attr(feature = "rustc-serialize", derive(RustcEncodable, RustcDecodable))]
+#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 #[allow(missing_docs)]
 pub struct Ratio<T> {
     numer: T,

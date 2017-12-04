@@ -46,6 +46,7 @@ mod biguint_tests;
 /// `(a + b * big_digit::BASE + c * big_digit::BASE^2)`.
 #[derive(Clone, Debug, Hash)]
 #[cfg_attr(feature = "rustc-serialize", derive(RustcEncodable, RustcDecodable))]
+#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 pub struct BigUint {
     data: Vec<BigDigit>,
 }

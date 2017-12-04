@@ -61,6 +61,7 @@ use traits::{Zero, One, Num, Float};
 /// ```
 #[derive(PartialEq, Eq, Copy, Clone, Hash, Debug, Default)]
 #[cfg_attr(feature = "rustc-serialize", derive(RustcEncodable, RustcDecodable))]
+#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 #[repr(C)]
 pub struct Complex<T> {
     /// Real portion of the complex number
